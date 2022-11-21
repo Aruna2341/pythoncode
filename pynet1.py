@@ -1,7 +1,8 @@
 from netmiko import ConnectHandler
  
 #First create the device object using a dictionary
-CSR = {
+with
+Router = {
     "device_type": "cisco_ios",
     "ip": "sandbox-iosxe-latest-1.cisco.com",
     "username": "developer",
@@ -14,8 +15,8 @@ net_connect = ConnectHandler(**CSR)
  
 # Then send the command and print the output
 
-output = net_connect.send_command('show ip int brief')
-print (output)
+output_runconfig = net_connect.send_command('show run')
+print (output_runconfig)
  
 # Finally close the connection
 net_connect.disconnect()
